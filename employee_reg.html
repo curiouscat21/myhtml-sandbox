@@ -71,7 +71,7 @@
 <body>
     <div class="container">
         <h1>Employee Registration</h1>
-        <form action="#" method="post" id="registration-form">
+        <form id="registration-form">
             <div class="form-group">
                 <label for="last_name">Last Name:</label>
                 <input type="text" id="last_name" required>
@@ -104,5 +104,28 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            alert('Form submitted!');
+    
+            const lastName = document.getElementById('last_name').value;
+            const firstName = document.getElementById('first_name').value;
+            const middleName = document.getElementById('middle_name').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const department = document.getElementById('department').value;
+            const office = document.getElementById('office').value;
+    
+            console.log('Last Name is:', lastName);
+            console.log('First Name is:', firstName);
+            console.log('Middle Name is:', middleName);
+            console.log('Birthdate is:', birthdate);
+            console.log('Department is from:', department);
+            console.log('Office is from:', office);
+        });
+    </script>
+    
 </body>
 </html>
